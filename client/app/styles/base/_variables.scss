@@ -1,0 +1,18 @@
+@use "./../helpers" as *;
+
+:root {
+  --color-light: #f6f3ee;
+	--color-dark: #4d3126;
+
+  --font-family-accent: "TenorSans", sans-serif;
+  --font-family-base: "WixMadeforDisplay", sans-serif;
+
+  --container-width: #{rem(1860)};
+  --container-padding-x: #{rem(20)};
+
+  --border-radius: #{rem(10)};
+
+	--button-height: #{rem(64)};
+
+  --transition-duration: 0.25s;
+}

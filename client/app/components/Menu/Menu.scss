@@ -1,0 +1,15 @@
+@use "~/styles/helpers" as *;
+
+.menu {
+  &__list {
+    display: flex;
+    align-items: center;
+    column-gap: rem(35);
+  }
+
+  &__link {
+    @include hover(false) {
+      opacity: 0.6;
+    }
+  }
+}

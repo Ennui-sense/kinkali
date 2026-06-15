@@ -1,0 +1,32 @@
+@use "~/styles/helpers" as *;
+
+.hero {
+  text-align: center;
+  padding-top: rem(200);
+  height: 100vh;
+
+  &__bg {
+    &-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transform: translateY(rem(200));
+
+      &--animated {
+        animation: slideUpFade 1s ease-out forwards; // forwards оставляет картинку в финальной точке
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(50);
+  }
+}
+
+@keyframes slideUpFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
