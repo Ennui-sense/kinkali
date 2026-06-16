@@ -8,15 +8,17 @@
   font-weight: 600;
   animation: shift infinite 3s;
   position: relative;
+	color: var(--color-light);
 
   &::after {
     content: "";
     position: absolute;
     inset: 0;
     border-radius: 100%;
-    background-color: rgba(218, 201, 183, 0.76);
+    background-color: var(--color-dark);
     filter: blur(rem(200));
     opacity: 0;
+		z-index: -1;
     transition-duration: var(--transition-duration);
   }
 
@@ -31,6 +33,12 @@
       height: rem(80)
     }
   }
+	
+	&__button {
+		&:first-child {
+			margin-bottom: rem(20);
+		}
+	}
 }
 
 @keyframes shift {

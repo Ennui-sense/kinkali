@@ -25,22 +25,27 @@ const MenuModal = ({ closeModal }: IMenuModal) => {
         <Menu />
 
         <div className="menu-modal__contacts">
-          <a href="tel:+79822458855" className="menu-modal__link">+7 (982) 245-88-55</a>
-          <p className="menu-modal__text">Сапфирная ул., 15, Пермь</p>
+          <a href="tel:+73422233313" className="menu-modal__link">
+            +7 (342) 223-33-13
+          </a>
+          <p className="menu-modal__text">г. Пермь, ул. Белинского, 6Б</p>
+          <p className="menu-modal__text">12:00 - 00:00</p>
           <div className="menu-modal__socials">
-            <a href="/" className="menu-modal__socials-link">
+            <a
+              href="https://vk.com/kinkaliperm"
+              className="menu-modal__socials-link"
+            >
               <VkIcon />
-            </a>
-            <a href="/" className="menu-modal__socials-link">
-              <TgIcon />
             </a>
           </div>
         </div>
       </div>
 
-      <button type="button" className="menu-modal__button" onClick={closeModal}><CrossIcon /></button>
+      <button type="button" className="menu-modal__button" onClick={closeModal}>
+        <CrossIcon />
+      </button>
     </motion.div>
-  )
-}
+  );
+};
 
-export default MenuModal
+export default MenuModal;

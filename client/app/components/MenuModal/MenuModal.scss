@@ -7,9 +7,8 @@
   z-index: 100;
   width: 100vw;
   height: 100vh;
-  backdrop-filter: blur(rem(10));
-  background: rgba(164, 132, 97, 0.17);
-  padding-block: rem(150) rem(70);
+  background: var(--color-light);
+  padding-block: rem(150) rem(50);
 
   &__inner {
     display: flex;
@@ -38,7 +37,7 @@
     right: rem(25);
 
     & svg * {
-      stroke: var(--color-gray);
+      stroke: var(--color-dark);
     }
 
     &:active {

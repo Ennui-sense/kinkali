@@ -2,17 +2,23 @@
 
 :root {
   --color-light: #f6f3ee;
-	--color-dark: #4d3126;
+  --color-dark: #4d3126;
 
   --font-family-accent: "TenorSans", sans-serif;
   --font-family-base: "WixMadeforDisplay", sans-serif;
 
-  --container-width: #{rem(1860)};
+  --container-width: #{rem(1800)};
   --container-padding-x: #{rem(20)};
 
-  --border-radius: #{rem(10)};
+  --border-radius: #{rem(36)};
 
-	--button-height: #{rem(64)};
+  --button-height: #{rem(70)};
+
+  --border: #{rem(2)} solid var(--color-light);
 
   --transition-duration: 0.25s;
+
+  @include tablet {
+    --button-height: #{rem(60)};
+  }
 }

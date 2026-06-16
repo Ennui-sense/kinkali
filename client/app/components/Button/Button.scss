@@ -3,12 +3,17 @@
 .button {
   @include flex-center(true);
   @include button-reset;
+	@include fluid-text(24, 20);
 
   color: var(--color-light);
 	background-color: var(--color-dark);
-	font-weight: 500;
+	font-weight: 600;
 	border-radius: var(--border-radius);
 	height: var(--button-height);
-	padding-inline: rem(25);
-	font-size: rem(24);
+	padding-inline: rem(35);
+
+	&--transparent {
+		background-color: transparent;
+		border: var(--border);
+	}
 }

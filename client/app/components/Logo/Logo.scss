@@ -2,12 +2,8 @@
 
 .logo {
   &__image {
-    // @include desktop {
-    //   width: rem(200)
-    // }
-
-    // @include mobile {
-    //   width: rem(150);
-    // }
+    @include mobile {
+      width: rem(120);
+    }
   }
 }

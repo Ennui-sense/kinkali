@@ -10,14 +10,14 @@ import { useState, useEffect } from "react";
 import MenuModal from "~/components/MenuModal/MenuModal";
 import Button from "~/components/Button/Button";
 
-import { AnimatePresence } from "motion/react"
+import { AnimatePresence } from "motion/react";
 import clsx from "clsx";
 import useMediaQuery from "~/hooks/useMediaQuery";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [isChanged, setIsChanged] = useState<boolean>(false);
-  const isTablet = useMediaQuery("tablet");
+  const isMobile = useMediaQuery("mobile");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,35 +28,39 @@ const Header = () => {
       }
 
       setIsChanged(isScrolled);
-    }
+    };
 
     handleScroll();
 
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [isChanged])
+  }, [isChanged]);
 
   useEffect(() => {
-    if (!isTablet) {
+    if (!isMobile) {
       setIsOpen(false);
     }
-  }, [isTablet])
+  }, [isMobile]);
 
   return (
     <header className={clsx("header", { "header--changed": isChanged })}>
       <div className="header__inner container">
         <Logo className="header__logo" imageSrc={LogoImageSrc} />
-        {/* {isTablet ? <BurgerButton openModal={() => setIsOpen(true)} /> : <Menu className="header__menu" />} */}
-				<Menu/>
-				<Button className="header__button">Забронировать</Button>
+        {isMobile ? (
+          <BurgerButton openModal={() => setIsOpen(true)} />
+        ) : (
+          <Menu className="header__menu" />
+        )}
 
-        {/* <AnimatePresence>
+        {!isMobile && <Button className="header__button">Забронировать</Button>}
+
+        <AnimatePresence>
           {isOpen && <MenuModal closeModal={() => setIsOpen(false)} />}
-        </AnimatePresence> */}
+        </AnimatePresence>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

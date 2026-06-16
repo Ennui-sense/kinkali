@@ -2,7 +2,7 @@
 
 
 body {
-  @include fluid-text(30, 16);
+  @include fluid-text(24, 16);
 
   font-family: var(--font-family-base);
   font-weight: 400;
