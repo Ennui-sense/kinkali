@@ -2,12 +2,13 @@
 
 
 body {
-  @include fluid-text(24, 16);
+  @include fluid-text(24, 20);
 
   font-family: var(--font-family-base);
   font-weight: 400;
   color: var(--color-dark);
 	background-color: var(--color-light);
+	height: rem(2000);
 }
 
 a {
